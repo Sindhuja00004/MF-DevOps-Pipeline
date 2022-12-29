@@ -1,0 +1,41 @@
+def nodetest() {
+	echo ('alive on $(hostname)')
+}
+pipeline {
+   agent { label 'MVP'}
+    tools {
+        maven 'Maven 3.6.0'
+    }
+parameters {
+booleanParam(
+            name: 'Sonar',
+            defaultValue: true,
+        )
+        booleanParam(
+            name: 'Static',
+            defaultValue: true,
+        )
+    }
+stages {
+stage ('Sonarqube Code Analysis') {
+	agent any
+     when {
+	 expression { params.Sonar == true }
+	 }
+           
+           steps {
+                build 'mod_sonarqube'
+                 }
+    }
+    stage ('Static Scan with ASoD') {
+	agent any
+     when {
+	 expression { params.Static == true }
+	 }
+           
+           steps {
+                build 'mod_asod'
+                 }
+    }
+    }
+}
