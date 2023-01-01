@@ -7,15 +7,17 @@ ________________________________________________________________________________
 1) Jenkins instance
 2) Sonarqube
 
-     FEATURES IN JENKINS
 _____________________________________________________________________________________________________________________________________________________________________
+     FEATURES IN JENKINS
+ 
 1) Modular pipeline
 2) Variablization
 3) Parameterization
 
 
-     MODULAR PIPELINE
  _____________________________________________________________________________________________________________________________________________________________________
+     MODULAR PIPELINE
+     
 * Modular Pipeline is basically the combibation of Parameterization and Variablization. 
 * Modularization helps the user to be more precise in writing and segregating the code. 
 * We can segregate the stages according to the requirement.
