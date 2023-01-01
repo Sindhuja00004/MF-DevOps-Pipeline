@@ -4,3 +4,11 @@ The DevOps repository consists automated CICD pipleline. The pipeline is maninly
      
      PREREQUISITES
 ___________________________________________________________________________________________________________________________________________________________________
+1) Jenkins instance
+2) Sonarqube
+
+Features in Jenkins
+_____________________________________________________________________________________________________________________________________________________________________
+1) Modular pipeline
+2) Variablization
+3) Parameterization
