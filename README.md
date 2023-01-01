@@ -21,6 +21,12 @@ ________________________________________________________________________________
 * Modular Pipeline is basically the combibation of Parameterization and Variablization. 
 * Modularization helps the user to be more precise in writing and segregating the code. 
 * We can segregate the stages according to the requirement.
+* Modular Sonar Pipeline.yml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
+
+
+______________________________________________________________________________________________________________________________________________________________________
+      VARIABLIZATION
+ 
 
 
      
