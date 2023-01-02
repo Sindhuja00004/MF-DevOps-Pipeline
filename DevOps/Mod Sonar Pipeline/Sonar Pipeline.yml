@@ -1,0 +1,70 @@
+def nodetest() {
+    echo ('alive on $(hostname)')
+}
+
+pipeline{
+    agent { label 'MVP'}
+    tools {
+        maven 'Maven 3.6.0'
+    }
+
+stages{
+    stage ('Initialize') {
+            steps {
+                sh '''
+                    echo "PATH = ${PATH}"
+                    echo "M2_HOME = ${M2_HOME}
+                    rm -rf TestingRepoforJenkins
+                    git clone -b main https://github.com/Sindhuja00004/TestingRepoforJenkins.git
+                    pwd
+                ''' 
+            }
+        }
+
+stage('SonarQube Analysis')
+{
+  agent { label 'MVP'}
+        steps {                
+            withSonarQubeEnv ( "mf-sonar" ) {
+            script {
+            //load "/var/lib/jenkins/.envars/variables.groovy"
+            load "/var/lib/jenkins/workspace/mod_sonarqube/TestingRepoforJenkins/variables.groovy"
+            echo "${SonarProjectName}"
+            echo "${SonarAuthentication}" 
+            echo "${SonarHostURL}"
+            echo "${SonarJacocoPath1}"
+            echo "${SonarJacocoPath2}"
+            echo "${SonarWebhook}"
+            echo "${BranchName}"
+            echo "${GitRepo}"
+            
+            sh """
+			pwd
+			rm -rf aob-build
+			mkdir -p aob-build
+			cd  aob-build
+			git clone -b ${BranchName} ${GitRepo}
+			echo $WORKSPACE
+			pwd
+			ls
+			cd VE_mvp_aobdxc/
+			mvn sonar:sonar package -Dsonar.login=${SonarAuthentication} \
+			-Dsonar.coverage.jacoco.xmlReportPaths=${SonarJacocoPath1},${SonarJacocoPath2} \
+            -Dsonar.host.url=${SonarHostURL} -Dsonar.analysis.buildNumber=${currentBuild.number} \
+            -Dsonar.analysis.jobName=${SonarProjectName} -Dsonar.test.inclusions=${SonarTestInclusion} -Dsonar.java.binaries=${SonarJavaBinaries} \
+            -Dsonar.webhooks.project=${SonarWebhook}/ 
+            
+"""
+}
+			            }
+			            }
+        }
+
+}
+}
+
+def get_aos_version() {
+    node('master') {
+        return env.AOS_VERSION
+    }
+}
