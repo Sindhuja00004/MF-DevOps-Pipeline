@@ -36,7 +36,8 @@ ________________________________________________________________________________
       Parameterization help to control the portion of the test to be executed. Here, in this modular pipeline we are using boolean paramter.
       Hence by defining Boolean Parameter inside a jenkins pipeline we can trigger the "Build with Paramaters" option.
       
-  ![image](https://user-images.githubusercontent.com/95271479/210199113-a06d8a23-8794-4ca6-956e-fe735f8cb155.png)
+  ![image](https://user-images.githubusercontent.com/95271479/210200791-df5192a7-ab55-4bd1-a9c0-7d9769782561.png)
+
 
       
 ___________________________________________________________________________________________________________________________________________________________________
@@ -46,6 +47,10 @@ ________________________________________________________________________________
       Keep the groovy file which contains variables, and load the variables from the github into the pipeline during the runtime.
       
   ![image](https://user-images.githubusercontent.com/95271479/210199470-67df54cd-e7a7-4614-8a70-e9f0e8a6f5b8.png)
+  
+  
+  
+
 
       
 
