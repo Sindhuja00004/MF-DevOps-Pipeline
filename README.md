@@ -2,10 +2,13 @@ The DevOps repository consists automated CICD pipleline. The pipeline is maninly
 
 ![image](https://user-images.githubusercontent.com/95271479/210165012-17686ac3-e7a1-47ef-9c0f-f19dbb056ce0.png)
      
-     PREREQUISITES
+   
 ___________________________________________________________________________________________________________________________________________________________________
+PREREQUISITES
+
 1) Jenkins instance
 2) Sonarqube
+3) ASoD instance
 
 _____________________________________________________________________________________________________________________________________________________________________
      FEATURES IN JENKINS
@@ -21,13 +24,18 @@ ________________________________________________________________________________
 * Modular Pipeline is basically the combibation of Parameterization and Variablization. 
 * Modularization helps the user to be more precise in writing and segregating the code. 
 * We can segregate the stages according to the requirement.
-* Modular Sonar Pipeline.yml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
+* Modular Pipeline yaml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
 
 
 ______________________________________________________________________________________________________________________________________________________________________
       PARAMETERIZATION
       Parameterization help to control the portion of the test to be executed. Here, in this modular pipeline we are using boolean paramter.
       Hence by defining Boolean Parameter inside a jenkins pipeline we can trigger the "Build with Paramaters" option.
+      
+___________________________________________________________________________________________________________________________________________________________________
+
+      VARIABLIZATION
+      
 
 
      
