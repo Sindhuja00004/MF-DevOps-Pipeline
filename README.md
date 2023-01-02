@@ -27,7 +27,8 @@ ________________________________________________________________________________
 * We can segregate the stages according to the requirement.
 * Modular Pipeline yaml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
 
-![image](https://user-images.githubusercontent.com/95271479/210199013-7fd44d42-febf-46c7-b5a6-d84b1cc7ec11.png)
+![image](https://user-images.githubusercontent.com/95271479/210200958-bbf4cb2b-ca91-4680-a5ed-a07103b0b1e7.png)
+
 
 
 
@@ -47,6 +48,8 @@ ________________________________________________________________________________
       Keep the groovy file which contains variables, and load the variables from the github into the pipeline during the runtime.
       
   ![image](https://user-images.githubusercontent.com/95271479/210199470-67df54cd-e7a7-4614-8a70-e9f0e8a6f5b8.png)
+  
+  
   
   
   
