@@ -28,7 +28,8 @@ ________________________________________________________________________________
 * We can segregate the stages according to the requirement.
 * Modular Pipeline yaml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
 
-![image](https://user-images.githubusercontent.com/95271479/210200958-bbf4cb2b-ca91-4680-a5ed-a07103b0b1e7.png)
+![image](https://user-images.githubusercontent.com/95271479/210201382-c680b096-8f53-42e0-ab9f-39980848a5fa.png)
+
 
 
 
