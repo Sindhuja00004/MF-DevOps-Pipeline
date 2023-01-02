@@ -26,6 +26,9 @@ ________________________________________________________________________________
 * We can segregate the stages according to the requirement.
 * Modular Pipeline yaml file consists of two stages i.e "Sonarqube Code Analysis" and "Static Scan with ASoD"
 
+![image](https://user-images.githubusercontent.com/95271479/210198677-9e1c844e-4fd6-4c8c-bfaf-93080219870a.png)
+
+
 
 ______________________________________________________________________________________________________________________________________________________________________
       PARAMETERIZATION
@@ -35,6 +38,7 @@ ________________________________________________________________________________
 ___________________________________________________________________________________________________________________________________________________________________
 
       VARIABLIZATION
+      Pipeline Variablization helps to separate configuration values from the core and inject during the runtime. Variablization is done for ASoD and sonarqube.
       
 
 
