@@ -44,6 +44,9 @@ ________________________________________________________________________________
       VARIABLIZATION
       Pipeline Variablization helps to separate configuration values from the core and inject during the runtime. Variablization is done for ASoD and sonarqube.
       
+  ![image](https://user-images.githubusercontent.com/95271479/210199470-67df54cd-e7a7-4614-8a70-e9f0e8a6f5b8.png)
+
+      
 
 
      
