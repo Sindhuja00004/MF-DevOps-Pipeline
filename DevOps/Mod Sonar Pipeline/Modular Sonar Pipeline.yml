@@ -7,17 +7,27 @@ pipeline {
         maven 'Maven 3.6.0'
     }
 parameters {
-booleanParam(
-            name: 'Sonar',
+        booleanParam(
+            name: 'Checkout',
             defaultValue: true,
         )
         booleanParam(
-            name: 'Static',
+            name: 'Sonar',
             defaultValue: true,
         )
     }
 stages {
-stage ('Sonarqube Code Analysis') {
+ stage ('Checkout') {
+	agent any
+     when {
+	 expression { params.Checkout == true }
+	 }
+           
+           steps {
+             build 'mod_checkout'
+                 }
+    }
+ stage ('Sonarqube Code Analysis') {
 	agent any
      when {
 	 expression { params.Sonar == true }
@@ -25,16 +35,6 @@ stage ('Sonarqube Code Analysis') {
            
            steps {
                 build 'mod_sonarqube'
-                 }
-    }
-    stage ('Static Scan with ASoD') {
-	agent any
-     when {
-	 expression { params.Static == true }
-	 }
-           
-           steps {
-                build 'mod_asod'
                  }
     }
     }
