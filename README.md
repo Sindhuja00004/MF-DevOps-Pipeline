@@ -1,6 +1,7 @@
 The DevOps repository consists automated CICD pipleline. The pipeline is maninly designed to understand the various features of jenkins.
 
-![image](https://user-images.githubusercontent.com/95271479/210314001-becd4859-68b2-48ed-a68e-81acac065601.png)
+![image](https://user-images.githubusercontent.com/95271479/210556153-372af877-c17c-4aa6-8a72-274c34276de3.png)
+
 
 
 
